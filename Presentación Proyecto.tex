@@ -1,0 +1,151 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+
+\title{Acoplamiento molecular entre la proteína E del SARS‐CoV‐2 y la amantadina}
+\author{Alba Marcela Zárate Rochín}
+\date{Enero 2021} 
+\institute{Curso de Computación Científica y Bioinformática\\Doctorado en Investigaciones Cerebrales\\Universidad Veracruzana}
+
+\begin{document}
+\begin{frame}[plain,t]
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Antecedentes}
+
+\begin{itemize}
+\item SARS‐CoV‐2 virus responsable de la enfermedad COVID-19
+	\begin{itemize}
+	\item Infección del tracto respiratorio que puede causar neumonía y una viremia que afecta a otros tejidos distantes como el riñón, el corazón y el cerebro.\\
+	\item Proceso hiperinflamatorio 
+	\end{itemize}
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{cov2.jpeg}
+    \label{fig:cov2}
+\end{figure}
+    \end{frame}
+
+\begin{frame}
+\frametitle{}
+
+\begin{itemize}
+\item Amantadina
+	\begin{description}
+	\item Potente antiinflamatorio con capacidad neuroprotectora
+	\end{description}
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{amantadina.png}
+    \caption{Estructura molecular}
+    \label{fig:amantadina}
+\end{figure}
+    \end{frame}
+
+\begin{frame}
+\frametitle{}
+
+\begin{itemize}
+\item Amantadina
+	\begin{description}
+	\item Eficaz en la profilaxis y el tratamiento de las infecciones por influenza A\\
+	Actividad antiviral selectiva\\
+	Inhibe el inicio de la infección o el ensamblaje del virus 
+	\end{description}
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{influeza.jpg}
+    \caption{Bloqueo del canal M2}
+    \label{fig:influenza}
+\end{figure}
+    \end{frame}
+
+
+\subsection{Text}
+\begin{frame}
+\frametitle{Plantemiento del problema}
+\begin{itemize}
+\item El virus del SARS-CoV-2 expresa un proteína de envoltura, conocida como proteína E, fundamental para la gemación viral y cuya actividad es inhibida por la amantadina.
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{protE.jpg}
+    \caption{Proteína E}
+    \label{fig:protE}
+\end{figure}
+    \end{frame}
+
+
+\begin{frame}
+\begin{itemize}
+\item Hipótesis
+	\begin{itemize}
+	\item La amantadina bloquea el canal de la proteína E evitando la liberación del núcleo viral al citoplasma celular.
+	\item Necesidad de nuevos estudios enfocados en las propiedades de la amantadina y en su posible interacción con la proteína E para indagar sobre su utilidad en posibles tratamientos en el COVID-19.
+	\end{itemize}
+\item Objetivo
+	\begin{description}
+	\item Realizar un análisis del acoplamiento molecular entre la molécula de la amantadina y el canal de la proteína E del SARS-CoV-2. 
+	\end{description}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Metodología}
+\begin{itemize}
+\item Proteína E (Protein Data Bank) y Amantadina (Drug Bank) en formato PDB
+\item Preparación de las moléculas
+\item Programa AutoDock 4.2.6., ejecutable de AutoDock vina y visualización en AutoDock Tools
+\item Generación de archivos con formato PDBQT
+\item Delimitar zona de acoplamiento
+\item Establecer parámetros de búsqueda, modos, exhaustividad y rango de energía 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{Grid.png}
+    \caption{Inserción de ligando y delimitación de la zona de acoplamiento}
+    \label{fig:Grid}
+\end{figure}
+    \end{frame}
+
+\begin{frame}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{Results1.png}
+    \caption{Resultados según la energía de afinidad de las conformaciones encontradas}
+    \label{fig:Results1}
+\end{figure}
+    \end{frame}
+
+\begin{frame}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{Results.png}
+    \caption{Resultado principal con energía de afinidad de -5.6 kcal/mol}
+    \label{fig:Results}
+\end{figure}
+    \end{frame}
+
+\begin{frame}
+\frametitle{Conclusiones}
+Entender los mecanismos de interacción entre la amantadina y la proteína E puede contribuir en la generación de tratamientos para esta enfermedad y otros usos clínicos asociados. En ese sentido, el uso de técnicas de mecánica molecular, como el docking, es muy útil para predecir energía y modos de enlace entre proteínas y ligandos. Este tipo de información es importante para el estudio de compuestos con potencial terapéutico. De manera general, se determinó la interacción in silico entre la proteína E y la amantadina con la finalidad de mostrar interacciones específicas para futuros análisis. 
+
+\end{frame}
+
+\end{document}
