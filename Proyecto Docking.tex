@@ -1,0 +1,85 @@
+\documentclass[12 pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+
+\title{\textbf{Acoplamiento molecular entre la proteína E del SARS‐CoV‐2 y la amantadina}}
+\author{\textbf{\small{Alba Marcela Zárate Rochín}}}
+\date{\textbf{\small{Doctorado en Investigaciones Cerebrales, Universidad Veracruzana\\Curso de Computación Científica y Bioinformática-2020}}}
+
+
+\renewcommand{\baselinestretch}{1.5}
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+Durante mucho tiempo, los coronavirus humanos (HCoV) se habían considerado patógenos intrascendentes que causan un tipo de resfriado común en personas sanas. Sin embargo, hace algunos años el coronavirus del síndrome respiratorio agudo severo (SARS-CoV) y el coronavirus del síndrome respiratorio del Medio Oriente (MERS-CoV) generaron epidemias globales con una alta morbilidad y mortalidad\citep{paules2020coronavirus}. Este es el caso del nuevo coronavirus de 2019 (SARS‐CoV‐2), reconocido inicialmente en Wuhan, China, el cual se propagó por todo el mundo y ha causado enfermedades severas y la muerte de miles de personas. El SARS‐CoV‐2 es funcionalmente similar a otros coronavirus, todos ingresan a las células huésped humanas mediante la unión con los receptores de la enzima convertidora de angiotensina 2 (ACE2) en tejidos nasales, orales y conjuntivales. Luego, utilizan una serina proteasa 2 transmembrana y una pro-proteína covertasa furina en un sitio de escisión multibásico en la proteína \textit{spike} para fusionar la membrana del coronavirus con la membrana de la célula huésped humana. Este mecanismo de entrada de la célula huésped permite que los coronavirus se diseminen sistémicamente y causen infecciones multiorgánicas\citep{stratton2020pathogenesis}.\\
+
+La sintomatología puede variar desde una infección del tracto respiratorio hasta la progresión a una neumonía viral con afectación intestinal y una viremia que afecta a otros tejidos distantes como el riñón, el corazón y el cerebro. La neumonía viral observada puede progresar a un proceso alveolar inflamatorio con edema pulmonar que se caracteriza típicamente como síndrome de dificultad respiratoria aguda que puede requerir intubación mecánica. La viremia se caracteriza por una infección de las células endoteliales, así como por coagulopatías como trombosis y émbolos pulmonares. En general, la progresión clínica se caracteriza por un proceso hiperinflamatorio\citep{xie2020clinical}. Dadas las importantes implicaciones de salud que genera el COVID-19 se considera una emergencia de salud pública mundial con fuertes implicaciones económicas, políticas y epidemiológicas. El principal desafío consiste en generar terapias óptimas para los pacientes con esta enfermedad y las manifestaciones sistémicas complejas asociadas\citep{cummings2020epidemiology}.\\
+
+En este sentido, se están realizando múltiples estudios en todo el mundo con el propósito de encontrar medicamentos antivirales, antibióticos, antipalúdicos y anticoagulantes que puedan contribuir tanto en la mejora de la sintomatología como en evitar la enfermedad. Ya que todas las investigaciones se encuentran en sus primeras etapas, se considera que aún no hay estudios disponibles que puedan dar evidencia del tratamiento más apropiado para el SARS-CoV-2. Sin embargo, evidencia reciente sugiere que los derivados del adamantano, como la amantadina, memantina y rimantadina, usados ampliamente en distintas enfermedades neurológicas, pueden ser útiles en el tratamiento para el COVID-19\citep{borra2020does}. Este tipo de fármacos contienen una estructura de hidrocarburos triciclos que tienen la capacidad de interferir con el canal de proteínas de la viroporina, aparentemente responsable de la liberación de virus ARN (p.ej. el coronavirus del SARS) de las células infectadas\citep{torres2007conductance}. También, se sabe que estos fármacos tienen efectos antivirales en ciertos modelos animales no humanos para coronavirus\citep{cimolai2020potentially}.  Además, la amantadina y la memantina se usan comúnmente como tratamiento sintomático para diversas patologías neurodegenerativas, por lo que se sugiere que tienen una capacidad neuroprotectora\citep{tipton2020response}. Al respecto, Rejdak y Grieb\citep{rejdak2020adamantanes} llevaron a cabo un estudio para evaluar la gravedad del COVID-19 en pacientes que padecen esclerosis múltiple, enfermedad de Parkinson y deterioro cognitivo y que dieron positivo a la infección. Previamente, estas personas habían recibido un tratamiento con amantadina o memantina en dosis estables y ninguno de ellos presentó manifestaciones clínicas de la enfermedad ni cambios significativos en el estado neurológico. Estos resultados son importantes, ya que justifican la necesidad de llevar a cabo más estudios sobre los efectos protectores de los adamantanos en la manifestación del COVID-19.\\\\
+
+\section{Planteamiento del problema}
+Particularmente, se ha demostrado que la amantadina es eficaz en la profilaxis y el tratamiento de las infecciones por influenza A, ya que presenta actividad antiviral selectiva y específica a dosis bajas que inhiben el inicio de la infección o el ensamblaje del virus\citep{hay1985molecular}. Estas acciones ocurren en la proteína M2, un canal de protones tetramérico que atraviesa la membrana y es el objetivo de diversos fármacos como la amantadina\citep{cady2010structure}. De manera similar, el virus del SARS-CoV-2 expresa un proteína de envoltura, conocida como proteína E, fundamental para la gemación viral y cuya actividad es inhibida por la amantadina\citep{torres2007conductance}. Además, se ha demostrado que la falta de la proteína E puede atenuar el daño en ratones infectados con coronavirus\citep{jimenez2014pdz}. Por ello, se ha sugerido que la amantadina bloquea el canal de la proteína E evitando la liberación del núcleo viral al citoplasma celular\citep{abreu2020amantadine}. Todo esto, aunado al potente efecto antiinflamatorio de la amantadina y dado que la respuesta inflamatoria es uno de los principales mecanismos patogénicos en la progresión de la infección por SARS-CoV-2\citep{jimenez2020anti}, enfatiza la necesidad de nuevos estudios enfocados en las propiedades de la amantadina y en su posible interacción con la proteína E para indagar sobre su utilidad en posibles tratamientos en el COVID-19. En este sentido, en el presente trabajo se realiza un análisis del acoplamiento molecular entre la molécula de la amantadina y el canal de la proteína E del SARS-CoV-2.\\\\
+
+\section{Metodología}
+La proteína E, como canal receptor, se obtuvo a través de la base de datos Protein Data Bank y la amantadina, como ligando, a través del Drug Bank, ambas en formato PDB. La preparación de la proteína se realizó con el programa Chimera y consistió en eliminar las moléculas de agua y los cofactores de la estructura cristalina. El tratamiento del ligando se llevó a cabo con el programa Avogadro, tomando como referencia la estructura 2D, para minimizar la energía de la molécula. Para el acoplamiento se utilizó el programa AutoDock 4.2.6., se instaló el ejecutable de AutoDock vina y se visualizó en AutoDock Tools. Como parte del proceso de acoplamiento, se agregaron los hidrógenos polares, las cargas de Kollman y se eliminaron los hidrógenos no polares, en el caso de la proteína. Posteriormente, se generaron archivos con formato PDBQT, tanto para la proteína como para el ligando. Para determinar la búsqueda espacial de las conformaciones y orientaciones posibles del complejo proteína-ligando, se fijaron los valores de la caja Grid. Cabe mencionar que el sitio de unión a ligando de la proteína E ha sido especificado en los aminoácidos fenilalanina 26 y alanina 22\citep{abreu2020amantadine}. Posteriormente, se fijó la macromolécula (proteína) y se seleccionó el respectivo ligando. Los parámetros de búsqueda se establecieron en modo aleatorio y se configuró el archivo de salida, así como los modos, la exhaustividad y el rango de energía en el que se realizaría el análisis. Por último, se corrió el archivo de salida con el ejecutable vina. Los resultados aparecen en la terminal de AutoDock, en donde se puede visualizar la afinidad (kcal/mol), la desviación cuadrada media (rmsd) para determinar la similitud entre las distintas conformaciones encontradas. A la vez, los resultados se visualizan en AutoDock Tools como una molécula con múltiples conformaciones.\\\\
+
+
+\section{Resultados}
+
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{amantadina.png}
+    \caption{Estructura molecular de la amantadina en 2D (Preparación en Avogadro)}
+    \label{fig:amantadina}
+    \end{figure}
+    
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{ProteinE.png}
+    \caption{Vistas de la Proteína E del SARS-CoV-2. Superficie molecular (izquierda) y en cintas (derecha)}
+    \label{fig:ProteinE}
+    \end{figure}
+    
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Grid.png}
+    \caption{Complejo proteína-ligando. Grid para determinar sitio de unión (derecha).}
+    \label{fig:Grid}
+    \end{figure}
+    
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Results1.png}
+    \caption{Terminal con resultados según la energía de afinidad de las conformaciones obtenidas (izquierda) Resultado principal (derecha).}
+    \label{fig:Results1}
+    \end{figure}
+    
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Results.png}
+    \caption{Vista del ligando y los aminoácidos con los que interactúa.}
+    \label{fig:Results}
+    \end{figure}
+
+\clearpage
+\section{Conclusiones}
+Dado que la respuesta inflamatoria es uno de los principales mecanismos patogénicos en el desarrollo de la infección por SARS-CoV-2, se ha sugerido que los efectos antiinflamatorios de la amantadina podrían ser útiles en el tratamiento de la enfermedad COVID-19. Se ha sugerido que la amantadina inhibe la actividad de la proteína E, implicada en el proceso de la liberación viral. Por lo cual, entender los mecanismos de interacción entre la amantadina y la proteína E puede contribuir en la generación de tratamientos para esta enfermedad y otros usos clínicos asociados. En ese sentido, el uso de técnicas de mecánica molecular, como el docking, es muy útil para predecir energía y modos de enlace entre proteínas y ligandos. Este tipo de información es importante para el estudio de compuestos con potencial terapéutico. De manera general, se determinó la interacción \textit{in silico} entre la proteína E y la amantadina con la finalidad de mostrar interacciones específicas para futuros análisis.  
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
